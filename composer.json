@@ -1,0 +1,30 @@
+{
+  "name": "msf",
+  "type": "project",
+  "license": "GPL",
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  },
+  "require": {
+    "php": ">=7.0.0",
+    "pinguo/php-msf": "dev-master",
+    "alcaeus/mongo-php-adapter": "^1.0"
+  },
+  "config": {
+    "process-timeout": 1800,
+    "vendor-dir": "./vendor/"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app",
+      "Test\\": "test"
+    }
+  }
+}
