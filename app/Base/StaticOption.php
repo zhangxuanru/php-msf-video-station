@@ -13,11 +13,10 @@ namespace App\Base;
  * @package PG\MSF\Base
  */
 class StaticOption
-{ 
+{  
 
-    public static function options($page='',$rage = [] )
-    {
-
+    public static function options($page='')
+    { 
        $common = [
          'style' => [
                      'css/bootstrap.min.css',
@@ -41,8 +40,11 @@ class StaticOption
         ];   
 
        $static = isset($options[$page]) ? $options[$page] : []; 
-       return array_merge_recursive($common,$static,$rage); 
+       return array_merge_recursive($common,$static); 
     } 
+
+    
+ 
 
     
     /**
@@ -50,5 +52,7 @@ class StaticOption
      */
     public function destroy()
     {
+
     }
+
 }

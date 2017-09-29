@@ -34,7 +34,7 @@ class MongoCollectionTest extends TestCase
             'errmsg' => null,
         ];
         $document = ['foo' => 'bar'];
-        $this->assertSame($expected, $collection->insert($document));
+        $this->assertEquals($expected, $collection->insert($document));
 
         $this->assertInstanceOf('MongoId', $document['_id']);
         $id = (string) $document['_id'];
@@ -103,12 +103,22 @@ class MongoCollectionTest extends TestCase
         $this->assertSame(1, $this->getCollection()->count(['*' => 'foo']));
     }
 
-    public function testInsertWithEmptyKey()
+    public function getDocumentsWithEmptyKey()
+    {
+        return [
+            'array' => [['' => 'foo']],
+            'object' => [(object) ['' => 'foo']],
+        ];
+    }
+
+    /**
+     * @dataProvider getDocumentsWithEmptyKey
+     */
+    public function testInsertWithEmptyKey($document)
     {
         $this->expectException(\MongoException::class);
         $this->expectExceptionMessage('zero-length keys are not allowed, did you use $ with double quotes?');
 
-        $document = ['' => 'foo'];
         $this->getCollection()->insert($document);
     }
 
@@ -152,7 +162,7 @@ class MongoCollectionTest extends TestCase
     public function testAcknowledgedWriteConcernWithBool()
     {
         $document = ['foo' => 'bar'];
-        $this->assertSame(
+        $this->assertEquals(
             [
                 'ok' => 1.0,
                 'n' => 0,
@@ -263,12 +273,15 @@ class MongoCollectionTest extends TestCase
         $this->assertSame(1, $this->getCollection()->count(['*' => 'foo']));
     }
 
-    public function testBatchInsertWithEmptyKey()
+    /**
+     * @dataProvider getDocumentsWithEmptyKey
+     */
+    public function testBatchInsertWithEmptyKey($document)
     {
         $this->expectException(\MongoException::class);
         $this->expectExceptionMessage('zero-length keys are not allowed, did you use $ with double quotes?');
 
-        $documents = [['' => 'foo']];
+        $documents = [$document];
         $this->getCollection()->batchInsert($documents);
     }
 
@@ -316,7 +329,7 @@ class MongoCollectionTest extends TestCase
         ];
 
         $result = $this->getCollection()->update(['foo' => 'bar'], ['$set' => ['foo' => 'foo']]);
-        $this->assertSame($expected, $result);
+        $this->assertEquals($expected, $result);
 
         $this->assertSame(1, $this->getCheckDatabase()->selectCollection('test')->count(['foo' => 'foo']));
     }
@@ -340,7 +353,7 @@ class MongoCollectionTest extends TestCase
         ];
 
         $result = $this->getCollection()->update(['foo' => 'bar'], ['foo' => 'foo']);
-        $this->assertSame($expected, $result);
+        $this->assertEquals($expected, $result);
 
         $this->assertSame(1, $this->getCheckDatabase()->selectCollection('test')->count(['foo' => 'foo']));
         $this->assertSame(1, $this->getCheckDatabase()->selectCollection('test')->count(['bar' => 'foo']));
@@ -387,9 +400,29 @@ class MongoCollectionTest extends TestCase
         ];
 
         $result = $this->getCollection()->update(['change' => true], ['$set' => ['foo' => 'foo']], ['multiple' => true]);
-        $this->assertSame($expected, $result);
+        $this->assertEquals($expected, $result);
 
         $this->assertSame(3, $this->getCheckDatabase()->selectCollection('test')->count(['foo' => 'foo']));
+    }
+
+    public function testUpdateWhichDoesntMatchQuery()
+    {
+        $document = ['foo' => 'bar'];
+        $this->getCollection()->insert($document);
+
+        $expected = [
+            'ok' => 1.0,
+            'nModified' => 0,
+            'n' => 0,
+            'err' => null,
+            'errmsg' => null,
+            'updatedExisting' => false,
+        ];
+
+        $result = $this->getCollection()->update(['foo' => 'bar22'], ['$set' => ['foo' => 'foo']]);
+        $this->assertEquals($expected, $result);
+
+        $this->assertSame(1, $this->getCheckDatabase()->selectCollection('test')->count(['foo' => 'bar']));
     }
 
     public function testUnacknowledgedUpdate()
@@ -400,6 +433,45 @@ class MongoCollectionTest extends TestCase
         $this->getCollection()->insert($document);
 
         $this->assertTrue($this->getCollection()->update($document, ['$set' => ['foo' => 'foo']], ['w' => 0]));
+    }
+
+    public function testUpdateWithInvalidKey()
+    {
+        $document = ['foo' => 'bar'];
+        $this->getCollection()->insert($document);
+
+        $update_document = ['*' => 'foo'];
+        $this->getCollection()->update($document, $update_document);
+
+        $this->assertSame(1, $this->getCollection()->count(['*' => 'foo']));
+    }
+
+    /**
+     * @dataProvider getDocumentsWithEmptyKey
+     */
+    public function testUpdateWithEmptyKey($updateDocument)
+    {
+        $document = ['foo' => 'bar'];
+        $this->getCollection()->insert($document);
+
+        $this->expectException(\MongoException::class);
+        $this->expectExceptionMessage('zero-length keys are not allowed, did you use $ with double quotes?');
+
+        $this->getCollection()->update($document, $updateDocument);
+    }
+
+    /**
+     * @dataProvider getDocumentsWithEmptyKey
+     */
+    public function testAtomicUpdateWithEmptyKey($updateDocument)
+    {
+        $document = ['foo' => 'bar'];
+        $this->getCollection()->insert($document);
+
+        $this->expectException(\MongoException::class);
+        $this->expectExceptionMessage('zero-length keys are not allowed, did you use $ with double quotes?');
+
+        $this->getCollection()->update($document, ['$set' => $updateDocument]);
     }
 
     public function testRemoveMultiple()
@@ -420,7 +492,7 @@ class MongoCollectionTest extends TestCase
         ];
 
         $result = $this->getCollection()->remove(['foo' => 'bar']);
-        $this->assertSame($expected, $result);
+        $this->assertEquals($expected, $result);
 
         $this->assertSame(1, $this->getCheckDatabase()->selectCollection('test')->count());
     }
@@ -441,7 +513,7 @@ class MongoCollectionTest extends TestCase
         ];
 
         $result = $this->getCollection()->remove(['foo' => 'bar'], ['justOne' => true]);
-        $this->assertSame($expected, $result);
+        $this->assertEquals($expected, $result);
 
         $this->assertSame(2, $this->getCheckDatabase()->selectCollection('test')->count());
     }
@@ -665,7 +737,7 @@ class MongoCollectionTest extends TestCase
     {
         $this->expectException(\MongoConnectionException::class);
 
-        $client = $this->getClient([], 'mongodb://localhost:28888?connectTimeoutMS=1');
+        $client = $this->getClient([], 'mongodb://localhost:28888/?connectTimeoutMS=1');
         $collection = $client->selectCollection('mongo-php-adapter', 'test');
 
         $collection->findOne();
@@ -976,7 +1048,7 @@ class MongoCollectionTest extends TestCase
         $insertDocument = ['_id' => new \MongoId($id), 'foo' => 'bar'];
         $saveDocument = ['_id' => new \MongoId($id), 'foo' => 'foo'];
         $collection->insert($insertDocument);
-        $this->assertSame($expected, $collection->save($saveDocument));
+        $this->assertEquals($expected, $collection->save($saveDocument));
 
         $newCollection = $this->getCheckDatabase()->selectCollection('test');
         $this->assertSame(1, $newCollection->count());
@@ -1267,7 +1339,8 @@ class MongoCollectionTest extends TestCase
             $expected['code'] = 27;
         }
 
-        $this->assertEquals($expected, $this->getCollection()->deleteIndex('bar'));
+        // Using assertArraySubset because newer versions (3.4.7?) also return `codeName`
+        $this->assertArraySubset($expected, $this->getCollection()->deleteIndex('bar'));
 
         $this->assertCount(2, iterator_to_array($newCollection->listIndexes()));
     }
@@ -1326,7 +1399,8 @@ class MongoCollectionTest extends TestCase
             $expected['code'] = 26;
         }
 
-        $this->assertSame($expected, $this->getCollection('nonExisting')->deleteIndexes());
+        // Using assertArraySubset because newer versions (3.4.7?) also return `codeName`
+        $this->assertArraySubset($expected, $this->getCollection('nonExisting')->deleteIndexes());
     }
 
     public function dataGetIndexInfo()

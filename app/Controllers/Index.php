@@ -11,27 +11,37 @@ namespace App\Controllers;
 use PG\MSF\Controllers\Controller;
 
 use App\Base\StaticOption;
+use App\Controllers\Base;
 
-class Index extends Controller
-{ 
+class Index extends Base
+{    
     public function actionIndex()
     {  
-    	  $static = StaticOption::options();
-
-      //  print_r($static);
-
-        // echo STATIC_URL;
-        
-       $this->output( $static );  
-
-
-        $assign = []; 
-        $this->outputView($assign,'Index/Index');
+         $static = StaticOption::options();   
+         $static_url = $this->getConfig()->get('constant.STATIC_URL');   
+         $assign = [
+              'static_url' => $static_url,
+              'static'     => $static
+           ];  
+         $this->outputView($assign); 
     }
+
+
+    
 
     public function actionBack()
     {
-    	 // $this->output('hi zxr,国兴 hello world!');  
+    	  $this->output('hi zxr,国兴 hello world!');  
+    }
+
+
+    /**
+     * 销毁,解除引用
+     */
+    public function destroy()
+    {
+
     }
 
 }
+

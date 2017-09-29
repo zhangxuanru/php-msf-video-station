@@ -1,40 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="">
-    <meta name="author" content="">
-	
-    <title>KoolTube</title>
-	
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css"  type="text/css">
-	
-	<!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-	
-	<!-- Owl Carousel Assets -->
-    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
-	
-	<!-- Custom Fonts -->
-    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
-	
-	<!-- jQuery -->
-	<script src="js/jquery-2.1.1.js"></script>
-	
-	<!-- Core JavaScript Files -->  	 
-    <script src="js/bootstrap.min.js"></script>
-	
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="js/html5shiv.js"></script>
-        <script src="js/respond.min.js"></script>
-    <![endif]-->
-</head>
+<?php 
+//echo $static_url;
+ 
+//echo "<pre>";
+//print_r($static);
+
+?> 
+
+<?php //$this->layout('Public/Header') ?>
 
 <body>
 <header>
@@ -1016,93 +988,7 @@
 		
 	</div>
 
-	<footer>
-		<div class="top-footer">
-			<ul class="footer-social list-inline">
-				<li><a href="#"><i class="fa fa-twitter"></i> <span>Twitter</span></a></li>
-				<li><a href="#"><i class="fa fa-facebook"></i> <span>Facebook</span></a></li>
-				<li><a href="#"><i class="fa fa-google-plus"></i> <span>Google+</span></a></li>
-				<li><a href="#"><i class="fa fa-youtube"></i> <span>Video's Tag</span></a></li>
-				<li><a href="#"><i class="fa fa-vimeo-square"></i> <span>Vimeo</span></a></li>
-				<li><a href="#"><i class="fa fa-pinterest"></i> <span>Pinterest</span></a></li>
-				<li><a href="#"><i class="fa fa-rss"></i> <span>Rss</span></a></li>
-			</ul>  
-		</div>
-		<div class="wrap-footer">
-			<div class="container">
-				<div class="row"> 
-					<aside class="col-footer col-md-3">
-						<h2 class="footer-title">About Us</h2>
-						<div class="textwidget">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan. <br> <br> 
-						Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan.</div>
-					</aside> 
-					<aside class="col-footer col-md-3 widget_recent_entries">
-						<h2 class="footer-title">Recent Posts</h2>
-						<ul>
-							<li><a href="#">MOST VISITED COUNTRIES</a></li>
-							<li><a href="#">5 PLACES THAT MAKE A GREAT HOLIDAY</a></li>
-							<li><a href="#">PEBBLE TIME STEEL IS ON TRACK TO SHIP IN JULY</a></li>
-							<li><a href="#">STARTUP COMPANY&#8217;S CO-FOUNDER TALKS ON HIS NEW PRODUCT</a></li>
-						</ul>
-					</aside>
-					<aside class="col-footer col-md-3">
-						<h2 class="footer-title">NEWS LETTER</h2>
-						If you want to receive our latest news send directly to your email, please leave your email address bellow. Subscription is free and you can cancel anytime.
-						<form action="#" method="post">
-							<input type="text" name="your-name" value="" size="40" placeholder="Your Email" />
-							<input type="submit" value="SUBSCRIBE" class="btn btn-3" />
-						</form>
-					</aside>
-					<aside class="col-footer col-md-3 wptt_TwitterTweets">
-						<h2 class="footer-title">Twitter</h2>
-						<ul class="fetched_tweets light">
-							<li class="tweets_avatar">
-								<div class="tweet_wrap">
-									<div class="wdtf-user-card ltr">
-										<div class="clear"></div>
-									</div>
-									<div class="tweet_data"> Check out 'NewsTube - Magazine Blog &amp; Video' on <a href="#" target="_blank" rel="nofollow">#EnvatoMarket</a> <a href="#" target="_blank" rel="nofollow">#themeforest</a></div> <br/>
-									<div class="clear"></div>
-									<div class="times"> <em> <a href="#" target="_blank" title="Follow cactusthemes on Twitter [Opens new window]"> 2 months ago </a> </em></div>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</li>
-							<li class="tweets_avatar">
-								<div class="tweet_wrap">
-									<div class="wdtf-user-card ltr"><div class="clear"></div></div>
-									<div class="tweet_data"> Our latest theme 'Nano - Simple Magazine WordPress Theme' on <a href="#" target="_blank" rel="nofollow">#EnvatoMarket</a></div> <br/>
-									<div class="clear"></div>
-									<div class="times"> <em> <a href="#" target="_blank" title="Follow cactusthemes on Twitter [Opens new window]"> 5 months ago </a> </em></div>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</li>
-						</ul>
-					</aside>
-				</div>
-			</div>
-		</div>
-		<div class="bottom-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-sm-6 copyright">
-						<span>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://www.cssmoban.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></span>
-					</div>
-					<div class="col-md-6 col-sm-6 link">
-						<div class="menu-footer-menu-container">
-							<ul id="menu-footer-menu" class="menu list-inline">
-								<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-								<li><a href="#"><i class="fa fa-comments"></i> Contact</a></li>
-								<li><a href="#"><i class="fa fa-question-circle"></i> FAQ</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> 
-	</footer>
-	<!-- Footer -->
+	
 	
 	<!-- JS -->
 	<script src="owl-carousel/owl.carousel.js"></script>

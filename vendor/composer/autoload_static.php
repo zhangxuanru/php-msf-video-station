@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit595377d5bbdc69ae0547309a83e44a30
+class ComposerStaticInit37dac9818a81d8a564c92c382936cd65
 {
     public static $files = array (
         '3a37ebac017bc098e9a86b35401e7a68' => __DIR__ . '/..' . '/mongodb/mongodb/src/functions.php',
@@ -117,9 +117,9 @@ class ComposerStaticInit595377d5bbdc69ae0547309a83e44a30
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit595377d5bbdc69ae0547309a83e44a30::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit595377d5bbdc69ae0547309a83e44a30::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit595377d5bbdc69ae0547309a83e44a30::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit37dac9818a81d8a564c92c382936cd65::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit37dac9818a81d8a564c92c382936cd65::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit37dac9818a81d8a564c92c382936cd65::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
