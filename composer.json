@@ -1,5 +1,5 @@
 {
-  "name": "msf",
+  "name": "pinguo/php-msf-demo",
   "type": "project",
   "license": "GPL",
   "repositories": {
@@ -10,7 +10,7 @@
   },
   "require": {
     "php": ">=7.0.0",
-    "pinguo/php-msf": "dev-master",
+    "pinguo/php-msf": ">=3.0.0",
     "alcaeus/mongo-php-adapter": "^1.0"
   },
   "config": {

@@ -14,9 +14,7 @@ return array(
     'PG\\AOP\\' => array($vendorDir . '/pinguo/php-aop/src'),
     'Noodlehaus\\' => array($vendorDir . '/hassankhan/config/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
-    'MongoDB\\' => array($vendorDir . '/mongodb/mongodb/src'),
-    'League\\Plates\\' => array($vendorDir . '/pinguo/plates/src'),
+    'League\\Plates\\' => array($vendorDir . '/league/plates/src'),
     'Flexihash\\' => array($vendorDir . '/flexihash/flexihash/src'),
     'App\\' => array($baseDir . '/app'),
-    'Alcaeus\\MongoDbAdapter\\' => array($vendorDir . '/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter'),
 );

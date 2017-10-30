@@ -10,19 +10,15 @@ namespace App\Controllers;
 
 use PG\MSF\Controllers\Controller;
 
-use App\Base\StaticOption;
+
 use App\Controllers\Base;
 
 class Index extends Base
 {    
+    
     public function actionIndex()
-    {  
-         $static = StaticOption::options();   
-         $static_url = $this->getConfig()->get('constant.STATIC_URL');   
-         $assign = [
-              'static_url' => $static_url,
-              'static'     => $static
-           ];  
+    {   
+         $assign = $this->staticOption;
          $this->outputView($assign); 
     }
 

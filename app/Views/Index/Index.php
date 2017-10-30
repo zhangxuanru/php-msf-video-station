@@ -1,12 +1,11 @@
-<?php 
-//echo $static_url;
- 
-//echo "<pre>";
-//print_r($static);
+<?php
+echo $static_url; 
+echo "<pre>";
+print_r($static);
+?>
 
-?> 
-
-<?php //$this->layout('Public/Header') ?>
+<?php // $this->layout('Public/Test') ?>
+<?php  $this->insert('Public/Test') ?>
 
 <body>
 <header>

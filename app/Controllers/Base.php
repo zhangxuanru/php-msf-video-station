@@ -9,9 +9,12 @@
 namespace App\Controllers;
 
 use PG\MSF\Controllers\Controller; 
+use App\Base\StaticOption;
 
 class Base extends Controller
 {  
+   
+   public $staticOption = [];
 
    public function __construct($controllerName, $methodName)
    { 
@@ -26,8 +29,14 @@ class Base extends Controller
    */
   public function __init()
   {
-      
-  } 
+         $static = StaticOption::options();   
+         $static_url = $this->getConfig()->get('constant.STATIC_URL');   
+         $assign = [
+              'static_url' => $static_url,
+              'static'     => $static
+           ];  
+         $this->staticOption = $assign;
+    } 
     
 
     /**

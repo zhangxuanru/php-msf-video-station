@@ -6,5 +6,4 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Mongo' => array($vendorDir . '/alcaeus/mongo-php-adapter/lib/Mongo'),
 );

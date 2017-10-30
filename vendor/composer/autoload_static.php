@@ -4,12 +4,10 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit37dac9818a81d8a564c92c382936cd65
+class ComposerStaticInit5c9a8ef50939b338572fc5e91cb48f40
 {
     public static $files = array (
-        '3a37ebac017bc098e9a86b35401e7a68' => __DIR__ . '/..' . '/mongodb/mongodb/src/functions.php',
         'ae7194bca42dba7ee19708e6d06e5787' => __DIR__ . '/..' . '/pinguo/php-msf/src/Helpers/Common.php',
-        '06dd8487319ccd8403765f5b8c9f2d61' => __DIR__ . '/..' . '/alcaeus/mongo-php-adapter/lib/Mongo/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -32,7 +30,6 @@ class ComposerStaticInit37dac9818a81d8a564c92c382936cd65
         'M' => 
         array (
             'Monolog\\' => 8,
-            'MongoDB\\' => 8,
         ),
         'L' => 
         array (
@@ -45,7 +42,6 @@ class ComposerStaticInit37dac9818a81d8a564c92c382936cd65
         'A' => 
         array (
             'App\\' => 4,
-            'Alcaeus\\MongoDbAdapter\\' => 23,
         ),
     );
 
@@ -82,13 +78,9 @@ class ComposerStaticInit37dac9818a81d8a564c92c382936cd65
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
-        'MongoDB\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/mongodb/mongodb/src',
-        ),
         'League\\Plates\\' => 
         array (
-            0 => __DIR__ . '/..' . '/pinguo/plates/src',
+            0 => __DIR__ . '/..' . '/league/plates/src',
         ),
         'Flexihash\\' => 
         array (
@@ -98,28 +90,13 @@ class ComposerStaticInit37dac9818a81d8a564c92c382936cd65
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
-        'Alcaeus\\MongoDbAdapter\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'M' => 
-        array (
-            'Mongo' => 
-            array (
-                0 => __DIR__ . '/..' . '/alcaeus/mongo-php-adapter/lib/Mongo',
-            ),
-        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit37dac9818a81d8a564c92c382936cd65::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit37dac9818a81d8a564c92c382936cd65::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit37dac9818a81d8a564c92c382936cd65::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5c9a8ef50939b338572fc5e91cb48f40::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5c9a8ef50939b338572fc5e91cb48f40::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
