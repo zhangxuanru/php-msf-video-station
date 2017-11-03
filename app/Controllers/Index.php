@@ -8,26 +8,16 @@
 
 namespace App\Controllers;
 
-use PG\MSF\Controllers\Controller;
-
-
-use App\Controllers\Base;
-
 class Index extends Base
-{    
-    
+{
     public function actionIndex()
-    {   
-         $assign = $this->staticOption;
-         $this->outputView($assign); 
+    {
+         $this->display();
     }
-
-
-    
 
     public function actionBack()
     {
-    	  $this->output('hi zxr,国兴 hello world!');  
+       $this->output('hi zxr,国兴 hello world!');
     }
 
 

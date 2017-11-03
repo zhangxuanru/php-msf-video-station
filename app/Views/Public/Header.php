@@ -1,5 +1,3 @@
-<?php
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,23 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="">
-    <meta name="author" content="">
-	
+    <meta name="author" content="">	
     <title>KoolTube</title>
-	
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css"  type="text/css">
-	
-	<!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-	
-	<!-- Owl Carousel Assets -->
-    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
-	
-	<!-- Custom Fonts -->
-    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
-	
+
+<?php foreach ($static['style'] as $key => $value) {
+    $cssLink = $static_url.'/static/'.$value;
+    echo sprintf('<link rel="stylesheet" href="%s"  type="text/css">',$cssLink);
+} ?> 
+
+
 	<!-- jQuery -->
 	<script src="js/jquery-2.1.1.js"></script>
 	
@@ -38,3 +28,4 @@
     <![endif]-->
 </head>
 
+<?php echo $this->section("content");?>

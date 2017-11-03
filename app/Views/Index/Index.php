@@ -1,11 +1,4 @@
-<?php
-echo $static_url; 
-echo "<pre>";
-print_r($static);
-?>
-
-<?php // $this->layout('Public/Test') ?>
-<?php  $this->insert('Public/Test') ?>
+<?php  $this->layout('Public/Header',$staticOption ) ?>
 
 <body>
 <header>
@@ -104,7 +97,7 @@ print_r($static);
 						</a>
 						<p>Video's Name</p>
 					</div>
-					<img src="images/2.jpg" />
+					<img src="<?php echo $static_url ?>/static/images/2.jpg" />
 				</div>
 			</div>
 			<div class="item">
@@ -116,7 +109,7 @@ print_r($static);
 						</a>
 						<p>Video's Name</p>
 					</div>
-					<img src="images/3.jpg" />
+					<img src="<?php echo $static_url ?>/static/images/3.jpg" />
 				</div>
 			</div>
 			<div class="item">
@@ -128,7 +121,7 @@ print_r($static);
 						</a>
 						<p>Video's Name</p>
 					</div>
-					<img src="images/4.jpg" />
+					<img src="<?php echo $static_url ?>/static/images/4.jpg" />
 				</div>
 			</div>
 			<div class="item">
@@ -140,7 +133,7 @@ print_r($static);
 						</a>
 						<p>Video's Name</p>
 					</div>
-					<img src="images/5.jpg" />
+					<img src="<?php echo $static_url ?>/static/images/5.jpg" />
 				</div>
 			</div>
 			<div class="item">
@@ -152,7 +145,7 @@ print_r($static);
 						</a>
 						<p>Video's Name</p>
 					</div>
-					<img src="images/6.jpg" />
+					<img src="<?php echo $static_url ?>/static/images/6.jpg" />
 				</div>
 			</div>
 			<div class="item">
@@ -164,7 +157,7 @@ print_r($static);
 						</a>
 						<p>Video's Name</p>
 					</div>
-					<img src="images/7.jpg" />
+					<img src="<?php echo $static_url ?>/static/images/7.jpg" />
 				</div>
 			</div>
 			<div class="item">
@@ -176,7 +169,7 @@ print_r($static);
 						</a>
 						<p>Video's Name</p>
 					</div>
-					<img src="images/8.jpg" />
+					<img src="<?php echo $static_url ?>/static/images/8.jpg" />
 				</div>
 			</div>
 			<div class="item">
@@ -188,7 +181,7 @@ print_r($static);
 						</a>
 						<p>Video's Name</p>
 					</div>
-					<img src="images/9.jpg" />
+					<img src="<?php echo $static_url ?>/static/images/9.jpg" />
 				</div>
 			</div>
 		</div>
@@ -213,7 +206,7 @@ print_r($static);
 									</a>
 									<p>Video's Name</p>
 								</div>
-								<img src="images/1.jpg" />
+								<img src="<?php echo $static_url ?>/static/images/1.jpg" />
 							</div>
 						</div>
 					</div>
@@ -227,7 +220,7 @@ print_r($static);
 									</a>
 									<p>Video's Name</p>
 								</div>
-								<img src="images/2.jpg" />
+								<img src="<?php echo $static_url ?>/static/images/2.jpg" />
 							</div>
 							<div class="zoom-container">
 								<div class="zoom-caption">
@@ -237,7 +230,7 @@ print_r($static);
 									</a>
 									<p>Video's Name</p>
 								</div>
-								<img src="images/3.jpg" />
+								<img src="<?php echo $static_url ?>/static/images/3.jpg" />
 							</div>
 						</div>
 						<div class="col-md-3">
@@ -249,7 +242,7 @@ print_r($static);
 									</a>
 									<p>Video's Name</p>
 								</div>
-								<img src="images/4.jpg" />
+								<img src="<?php echo $static_url ?>/static/images/4.jpg" />
 							</div>
 							<div class="zoom-container">
 								<div class="zoom-caption">
@@ -259,7 +252,7 @@ print_r($static);
 									</a>
 									<p>Video's Name</p>
 								</div>
-								<img src="images/6.jpg" />
+								<img src="<?php echo $static_url ?>/static/images/6.jpg" />
 							</div>
 						</div>
 					</div>
@@ -284,7 +277,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/7.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/7.jpg" />
 										</div>
 										<h3 class="vid-name"><a href="#">Video's Name</a></h3>
 										<div class="info">
@@ -305,7 +298,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/8.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/8.jpg" />
 										</div>
 										<div class="wrapper">
 											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
@@ -325,7 +318,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/9.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/9.jpg" />
 										</div>
 										<div class="wrapper">
 											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
@@ -345,7 +338,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/6.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/6.jpg" />
 										</div>
 										<div class="wrapper">
 											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
@@ -367,7 +360,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/9.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/9.jpg" />
 										</div>
 										<h3 class="vid-name"><a href="#">Video's Name</a></h3>
 										<div class="info">
@@ -388,7 +381,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/4.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/4.jpg" />
 										</div>
 										<div class="wrapper">
 											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
@@ -408,7 +401,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/5.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/5.jpg" />
 										</div>
 										<div class="wrapper">
 											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
@@ -428,7 +421,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/2.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/2.jpg" />
 										</div>
 										<div class="wrapper">
 											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
@@ -460,7 +453,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/3.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/3.jpg" />
 										</div>
 										<h3 class="vid-name"><a href="#">Video's Name</a></h3>
 										<div class="info">
@@ -478,45 +471,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/4.jpg" />
-										</div>
-										<h3 class="vid-name"><a href="#">Video's Name</a></h3>
-										<div class="info">
-											<h5>By <a href="#">Kelvin</a></h5>
-											<span><i class="fa fa-calendar"></i>25/3/2015</span> 
-											<span><i class="fa fa-heart"></i>1,200</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="wrap-vid">
-										<div class="zoom-container">
-											<div class="zoom-caption">
-												<span>Video's Tag</span>
-												<a href="single.html">
-													<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-												</a>
-												<p>Video's Name</p>
-											</div>
-											<img src="images/5.jpg" />
-										</div>
-										<h3 class="vid-name"><a href="#">Video's Name</a></h3>
-										<div class="info">
-											<h5>By <a href="#">Kelvin</a></h5>
-											<span><i class="fa fa-calendar"></i>25/3/2015</span> 
-											<span><i class="fa fa-heart"></i>1,200</span>
-										</div>
-									</div>
-									<div class="wrap-vid">
-										<div class="zoom-container">
-											<div class="zoom-caption">
-												<span>Video's Tag</span>
-												<a href="single.html">
-													<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-												</a>
-												<p>Video's Name</p>
-											</div>
-											<img src="images/6.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/4.jpg" />
 										</div>
 										<h3 class="vid-name"><a href="#">Video's Name</a></h3>
 										<div class="info">
@@ -536,7 +491,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/7.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/5.jpg" />
 										</div>
 										<h3 class="vid-name"><a href="#">Video's Name</a></h3>
 										<div class="info">
@@ -554,7 +509,45 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/8.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/6.jpg" />
+										</div>
+										<h3 class="vid-name"><a href="#">Video's Name</a></h3>
+										<div class="info">
+											<h5>By <a href="#">Kelvin</a></h5>
+											<span><i class="fa fa-calendar"></i>25/3/2015</span> 
+											<span><i class="fa fa-heart"></i>1,200</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span>Video's Tag</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="<?php echo $static_url ?>/static/images/7.jpg" />
+										</div>
+										<h3 class="vid-name"><a href="#">Video's Name</a></h3>
+										<div class="info">
+											<h5>By <a href="#">Kelvin</a></h5>
+											<span><i class="fa fa-calendar"></i>25/3/2015</span> 
+											<span><i class="fa fa-heart"></i>1,200</span>
+										</div>
+									</div>
+									<div class="wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span>Video's Tag</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="<?php echo $static_url ?>/static/images/8.jpg" />
 										</div>
 										<h3 class="vid-name"><a href="#">Video's Name</a></h3>
 										<div class="info">
@@ -584,7 +577,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/9.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/9.jpg" />
 										</div>
 										<h3 class="vid-name"><a href="#">Video's Name</a></h3>
 										<div class="info">
@@ -606,7 +599,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/4.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/4.jpg" />
 										</div>
 										<div class="wrapper">
 											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
@@ -626,7 +619,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/5.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/5.jpg" />
 										</div>
 										<div class="wrapper">
 											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
@@ -646,7 +639,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/6.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/6.jpg" />
 										</div>
 										<div class="wrapper">
 											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
@@ -666,7 +659,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/7.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/7.jpg" />
 										</div>
 										<div class="wrapper">
 											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
@@ -698,7 +691,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/2.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/2.jpg" />
 										</div>
 										<h3 class="vid-name"><a href="#">Video's Name</a></h3>
 										<div class="info">
@@ -718,7 +711,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/8.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/8.jpg" />
 										</div>
 										<h3 class="vid-name"><a href="#">Video's Name</a></h3>
 										<div class="info">
@@ -738,7 +731,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/3.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/3.jpg" />
 										</div>
 										<h3 class="vid-name"><a href="#">Video's Name</a></h3>
 										<div class="info">
@@ -786,7 +779,7 @@ print_r($static);
 									</a>
 								</li>
 							</ul>
-							<img src="images/banner.jpg" />
+							<img src="<?php echo $static_url ?>/static/images/banner.jpg" />
 						</div>
 						<div class="line"></div>
 					</div>
@@ -820,7 +813,7 @@ print_r($static);
 										</a>
 										<p>Video's Name</p>
 									</div>
-									<img src="images/7.jpg" />
+									<img src="<?php echo $static_url ?>/static/images/7.jpg" />
 								</div>
 								<div class="wrapper">
 									<h5 class="vid-name"><a href="#">Video's Name</a></h5>
@@ -840,7 +833,7 @@ print_r($static);
 												</a>
 												<p>Video's Name</p>
 											</div>
-											<img src="images/8.jpg" />
+											<img src="<?php echo $static_url ?>/static/images/8.jpg" />
 										</div>
 								<div class="wrapper">
 									<h5 class="vid-name"><a href="#">Video's Name</a></h5>
@@ -860,7 +853,7 @@ print_r($static);
 										</a>
 										<p>Video's Name</p>
 									</div>
-									<img src="images/9.jpg" />
+									<img src="<?php echo $static_url ?>/static/images/9.jpg" />
 								</div>
 								<div class="wrapper">
 									<h5 class="vid-name"><a href="#">Video's Name</a></h5>
@@ -887,7 +880,7 @@ print_r($static);
 										</a>
 										<p>Video's Name</p>
 									</div>
-									<img src="images/3.jpg" />
+									<img src="<?php echo $static_url ?>/static/images/3.jpg" />
 								</div>
 								<h3 class="vid-name"><a href="#">Video's Name</a></h3>
 								<div class="info">
@@ -905,7 +898,7 @@ print_r($static);
 										</a>
 										<p>Video's Name</p>
 									</div>
-									<img src="images/4.jpg" />
+									<img src="<?php echo $static_url ?>/static/images/4.jpg" />
 								</div>
 								<h3 class="vid-name"><a href="#">Video's Name</a></h3>
 								<div class="info">
@@ -923,7 +916,7 @@ print_r($static);
 										</a>
 										<p>Video's Name</p>
 									</div>
-									<img src="images/5.jpg" />
+									<img src="<?php echo $static_url ?>/static/images/5.jpg" />
 								</div>
 								<h3 class="vid-name"><a href="#">Video's Name</a></h3>
 								<div class="info">
@@ -941,7 +934,7 @@ print_r($static);
 						<div class="content">
 							<div class="post">
 								<a href="single.html">
-									<img src="images/user.png" />
+									<img src="<?php echo $static_url ?>/static/images/user.png" />
 								</a>
 								<div class="wrapper">
 									<a href="#"><h5>Curabitur tincidunt porta lorem.</h5></a>
@@ -953,7 +946,7 @@ print_r($static);
 							</div>
 							<div class="post">
 								<a href="single.html">
-									<img src="images/user.png" />
+									<img src="<?php echo $static_url ?>/static/images/user.png" />
 								</a>
 								<div class="wrapper">
 									<a href="#"><h5>Curabitur tincidunt porta lorem.</h5></a>
@@ -965,7 +958,7 @@ print_r($static);
 							</div>
 							<div class="post">
 								<a href="single.html">
-									<img src="images/user.png" />
+									<img src="<?php echo $static_url ?>/static/images/user.png" />
 								</a>
 								<div class="wrapper">
 									<a href="#"><h5>Curabitur tincidunt porta lorem.</h5></a>
@@ -979,16 +972,16 @@ print_r($static);
 						<div class="line"></div>
 					</div>
 					<div class="widget wid-banner">
-						<img src="images/banner-2.jpg" />
+						<img src="<?php echo $static_url ?>/static/images/banner-2.jpg" />
 					</div>
 				</div>
 			</div>
-		</div>
-		
-	</div>
+		</div> 
+	</div> 
 
-	
-	
+	<?php $this->insert('Public/Footer',$staticOption ) ?>
+
+
 	<!-- JS -->
 	<script src="owl-carousel/owl.carousel.js"></script>
     <script>

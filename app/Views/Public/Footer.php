@@ -1,5 +1,3 @@
-<?php
-?>
 <footer>
 		<div class="top-footer">
 			<ul class="footer-social list-inline">
@@ -87,3 +85,5 @@
 		</div> 
 	</footer>
 	<!-- Footer -->
+
+<?php  echo  $static_url;?>
