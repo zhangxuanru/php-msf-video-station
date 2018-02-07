@@ -282,10 +282,17 @@ class Template
      * Output a rendered template.
      * @param  string $name
      * @param  array  $data
+     * @param array   $params
      * @return null
      */
-    public function insert($name, array $data = array())
+    public function insert($name, array $data = array(),...$params)
     {
+        $count = count($params);
+        if(!empty($count)){
+            for($i = 0; $i < $count;$i++){
+                 $data = array_merge($data,$params[$i]);
+            }
+        }
         echo $this->engine->render($name, $data);
     }
 

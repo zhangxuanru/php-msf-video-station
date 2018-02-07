@@ -169,7 +169,7 @@ body.sub-page .logo {margin: 110px 0 80px;background: url(../images/bg.jpg) fixe
 .box .info {margin: 5px 0 10px 0;}
 .box .box-header{padding: 8px 15px;background-color: #FFD800;display: inline-block;border-radius: 5px;}
 .box .box-header h2{font-size: 14px;margin:0;color: #fff;text-transform: uppercase;}
-.box .box-content {margin-top: 30px;}
+.box .box-content {margin-top: 17px;}
 .box .box-content a{font-weight: bold;}
 .box .box-content ol {float: left;text-align: justify;margin: 10px 50px;font-size: 16px;list-style-type: circle;}
 
@@ -458,3 +458,89 @@ footer .bottom-footer .link{margin-top: 10px;}
 .comment{}
 .comment h3{font-size: 15px; color: #000; font-weight: bold; text-transform: uppercase;}
 .comment textarea{height: 210px;}
+
+.vid-nameText{
+    max-width:100%;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden
+}
+.max50{
+    max-width: 50%
+}
+.wrapperText{
+    max-width: 50%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.moreText{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.vid-nameOneLine{
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    line-height: normal;
+}
+
+.wrapperwholeText{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.ui-container-row {
+    border: 0px;
+    border-right: 1px solid #bbb;
+    border-left: 1px solid #ddd;
+}
+
+.ui-container-row div#sidebar,
+.ui-container-row div#main-content{
+    border: 0px;
+    border-top: 1px solid #ddd;
+    padding: 20px;
+}
+
+.ui-container-row div#main-content.main-right-boder{
+    border-right: 1px solid #bbb;
+}
+
+.col-md-6{
+    padding-left: 0px;
+    padding-right:1px;
+}
+
+.padLeft10{
+    padding-left: 10px;
+}
+
+
+p.moreContent {
+    position: relative;
+    line-height: 25px;
+    max-height: 100px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+/* 不想要渐变就把background去掉 */
+p.moreContent:after {
+    content: "...";
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    padding-left: 40px;
+    background: -webkit-linear-gradient(left, transparent, #fff 55%);
+    background: -o-linear-gradient(right, transparent, #fff 55%);
+    background: -moz-linear-gradient(right, transparent, #fff 55%);
+    background: linear-gradient(to right, transparent, #fff 55%);
+}
+
+
+

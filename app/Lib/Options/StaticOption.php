@@ -13,12 +13,11 @@ namespace App\Lib\Options;
  * @package PG\MSF\Base
  */
 class StaticOption
-{  
-
+{
     public static function options($page='')
-    { 
+    {
        $common = [
-         'style' => [
+           'style' => [
                      'css/bootstrap.min.css',
                      'css/style.css',
                      'owl-carousel/owl.carousel.css',
@@ -27,18 +26,19 @@ class StaticOption
                     ],
           'script' => [
                        'js/jquery-2.1.1.js',
-                       'js/bootstrap.min.js',
-                       'js/owl.carousel.js'
+                       'js/bootstrap.min.js', 
+                       'owl-carousel/owl.carousel.js'
                       ]          
        ];
-       
-       $info = [
-               'index.index' => [
+        $options = [
+               'single.index' => [
                    'style'   => [],
-                   'script'  => [] 
+                   'script'  => [
+                       'js/play.js',
+                       'js/comment.js'
+                   ]
                ],  
-        ];   
-
+        ];
        $static = isset($options[$page]) ? $options[$page] : []; 
        return array_merge_recursive($common,$static); 
     } 

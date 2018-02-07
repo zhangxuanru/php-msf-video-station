@@ -4,13 +4,23 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit5c9a8ef50939b338572fc5e91cb48f40
+class ComposerStaticInitf397116eaf97b01ac14612120a5eebc2
 {
     public static $files = array (
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        '3a37ebac017bc098e9a86b35401e7a68' => __DIR__ . '/..' . '/mongodb/mongodb/src/functions.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '06dd8487319ccd8403765f5b8c9f2d61' => __DIR__ . '/..' . '/alcaeus/mongo-php-adapter/lib/Mongo/functions.php',
         'ae7194bca42dba7ee19708e6d06e5787' => __DIR__ . '/..' . '/pinguo/php-msf/src/Helpers/Common.php',
+        '33f2045f3e37f79455cc01e72d4b69d0' => __DIR__ . '/..' . '/pinguo/php-msf/src/Macro.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'c' => 
+        array (
+            'cdcchen\\net\\curl\\' => 17,
+        ),
         'T' => 
         array (
             'Test\\' => 5,
@@ -18,8 +28,10 @@ class ComposerStaticInit5c9a8ef50939b338572fc5e91cb48f40
         'P' => 
         array (
             'Psr\\Log\\' => 8,
+            'Psr\\Http\\Message\\' => 17,
             'PG\\MSF\\' => 7,
             'PG\\Log\\' => 7,
+            'PG\\I18N\\' => 8,
             'PG\\Context\\' => 11,
             'PG\\AOP\\' => 7,
         ),
@@ -30,10 +42,17 @@ class ComposerStaticInit5c9a8ef50939b338572fc5e91cb48f40
         'M' => 
         array (
             'Monolog\\' => 8,
+            'MongoDB\\' => 8,
         ),
         'L' => 
         array (
             'League\\Plates\\' => 14,
+        ),
+        'G' => 
+        array (
+            'GuzzleHttp\\Psr7\\' => 16,
+            'GuzzleHttp\\Promise\\' => 19,
+            'GuzzleHttp\\' => 11,
         ),
         'F' => 
         array (
@@ -42,10 +61,15 @@ class ComposerStaticInit5c9a8ef50939b338572fc5e91cb48f40
         'A' => 
         array (
             'App\\' => 4,
+            'Alcaeus\\MongoDbAdapter\\' => 23,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'cdcchen\\net\\curl\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cdcchen/curl-client/src',
+        ),
         'Test\\' => 
         array (
             0 => __DIR__ . '/../..' . '/test',
@@ -54,6 +78,10 @@ class ComposerStaticInit5c9a8ef50939b338572fc5e91cb48f40
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
         'PG\\MSF\\' => 
         array (
             0 => __DIR__ . '/..' . '/pinguo/php-msf/src',
@@ -61,6 +89,10 @@ class ComposerStaticInit5c9a8ef50939b338572fc5e91cb48f40
         'PG\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/pinguo/php-log/src',
+        ),
+        'PG\\I18N\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pinguo/php-i18n/src',
         ),
         'PG\\Context\\' => 
         array (
@@ -78,9 +110,25 @@ class ComposerStaticInit5c9a8ef50939b338572fc5e91cb48f40
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'MongoDB\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mongodb/mongodb/src',
+        ),
         'League\\Plates\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/plates/src',
+        ),
+        'GuzzleHttp\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'GuzzleHttp\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
+        ),
+        'GuzzleHttp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
         'Flexihash\\' => 
         array (
@@ -90,13 +138,28 @@ class ComposerStaticInit5c9a8ef50939b338572fc5e91cb48f40
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
+        'Alcaeus\\MongoDbAdapter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'M' => 
+        array (
+            'Mongo' => 
+            array (
+                0 => __DIR__ . '/..' . '/alcaeus/mongo-php-adapter/lib/Mongo',
+            ),
+        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit5c9a8ef50939b338572fc5e91cb48f40::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit5c9a8ef50939b338572fc5e91cb48f40::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf397116eaf97b01ac14612120a5eebc2::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf397116eaf97b01ac14612120a5eebc2::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitf397116eaf97b01ac14612120a5eebc2::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

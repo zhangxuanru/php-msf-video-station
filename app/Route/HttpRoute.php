@@ -23,7 +23,6 @@ class HttpRoute extends NormalRoute
         if(empty($request->server['path_info']) || $request->server['path_info'] == '/'){
             $request->server['path_info'] = 'index'; 
         }
- 
         $this->routeParams->host = $host;
         $this->routeParams->path = rtrim($request->server['path_info'], '/');
         $this->routeParams->verb = $this->parseVerb($request);

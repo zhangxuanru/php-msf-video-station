@@ -10,13 +10,7 @@
   },
   "require": {
     "php": ">=7.0",
-    "pinguo/php-log": "1.0.0"
-  },
-  "repositories": {
-    "pinguo/php-log": {
-      "type": "vcs",
-      "url": "https://github.com/pinguo/php-log.git"
-    }
+    "pinguo/php-log": "1.0.1"
   },
   "autoload": {
     "psr-4": {

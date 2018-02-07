@@ -12,21 +12,12 @@ class Index extends Base
 {
     public function actionIndex()
     {
-         $this->display();
-    }
-
-    public function actionBack()
-    {
-       $this->output('hi zxr,国兴 hello world!');
-    }
-
-
-    /**
-     * 销毁,解除引用
-     */
-    public function destroy()
-    {
-
+      //获取推荐视频
+       $data = yield $this->Logic->getVideoLogic()->getRecommendVideoData(0,5);
+       $Row['modular'] = yield $this->Logic->getVideoLogic()->getModularList($this->currentColnum,3);
+       $this->assign('data',$data);
+       $this->assign('modular',$Row);
+       $this->display();
     }
 
 }

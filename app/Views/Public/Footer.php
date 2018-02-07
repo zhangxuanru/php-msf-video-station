@@ -1,66 +1,29 @@
 <footer>
 		<div class="top-footer">
 			<ul class="footer-social list-inline">
-				<li><a href="#"><i class="fa fa-twitter"></i> <span>Twitter</span></a></li>
-				<li><a href="#"><i class="fa fa-facebook"></i> <span>Facebook</span></a></li>
-				<li><a href="#"><i class="fa fa-google-plus"></i> <span>Google+</span></a></li>
-				<li><a href="#"><i class="fa fa-youtube"></i> <span>Video's Tag</span></a></li>
-				<li><a href="#"><i class="fa fa-vimeo-square"></i> <span>Vimeo</span></a></li>
-				<li><a href="#"><i class="fa fa-pinterest"></i> <span>Pinterest</span></a></li>
-				<li><a href="#"><i class="fa fa-rss"></i> <span>Rss</span></a></li>
+				<li><a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter"></i> <span>Twitter</span></a></li>
+				<li><a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i> <span>Facebook</span></a></li>
+				<li><a target="_blank" href="https://www.google.com"><i class="fa fa-google-plus"></i> <span>Google+</span></a></li>
+				<li><a target="_blank" href="https://stackoverflow.com/"><i class="fa fa-youtube"></i> <span>stackoverflow</span></a></li>
+				<li><a target="_blank" href="https://www.wikipedia.org/"><i class="fa fa-vimeo-square"></i> <span>wikipedia</span></a></li>
+				<li><a target="_blank" href="https://segmentfault.com"><i class="fa fa-pinterest"></i> <span>segmentfault</span></a></li>
+				<li><a target="_blank" href="http://www.51cto.com/"><i class="fa fa-rss"></i> <span>51CTO</span></a></li>
 			</ul>  
 		</div>
 		<div class="wrap-footer">
 			<div class="container">
-				<div class="row"> 
+				<div class="row">
 					<aside class="col-footer col-md-3">
-						<h2 class="footer-title">About Us</h2>
-						<div class="textwidget">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan. <br> <br> 
-						Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan.</div>
-					</aside> 
+						<h2 class="footer-title">ABOUT I</h2>
+						<div class="textwidget">Live for your dream, and even if you do not get there, you still have lived.</div>
+					</aside>
 					<aside class="col-footer col-md-3 widget_recent_entries">
-						<h2 class="footer-title">Recent Posts</h2>
-						<ul>
-							<li><a href="#">MOST VISITED COUNTRIES</a></li>
-							<li><a href="#">5 PLACES THAT MAKE A GREAT HOLIDAY</a></li>
-							<li><a href="#">PEBBLE TIME STEEL IS ON TRACK TO SHIP IN JULY</a></li>
-							<li><a href="#">STARTUP COMPANY&#8217;S CO-FOUNDER TALKS ON HIS NEW PRODUCT</a></li>
-						</ul>
+
 					</aside>
 					<aside class="col-footer col-md-3">
-						<h2 class="footer-title">NEWS LETTER</h2>
-						If you want to receive our latest news send directly to your email, please leave your email address bellow. Subscription is free and you can cancel anytime.
-						<form action="#" method="post">
-							<input type="text" name="your-name" value="" size="40" placeholder="Your Email" />
-							<input type="submit" value="SUBSCRIBE" class="btn btn-3" />
-						</form>
+
 					</aside>
 					<aside class="col-footer col-md-3 wptt_TwitterTweets">
-						<h2 class="footer-title">Twitter</h2>
-						<ul class="fetched_tweets light">
-							<li class="tweets_avatar">
-								<div class="tweet_wrap">
-									<div class="wdtf-user-card ltr">
-										<div class="clear"></div>
-									</div>
-									<div class="tweet_data"> Check out 'NewsTube - Magazine Blog &amp; Video' on <a href="#" target="_blank" rel="nofollow">#EnvatoMarket</a> <a href="#" target="_blank" rel="nofollow">#themeforest</a></div> <br/>
-									<div class="clear"></div>
-									<div class="times"> <em> <a href="#" target="_blank" title="Follow cactusthemes on Twitter [Opens new window]"> 2 months ago </a> </em></div>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</li>
-							<li class="tweets_avatar">
-								<div class="tweet_wrap">
-									<div class="wdtf-user-card ltr"><div class="clear"></div></div>
-									<div class="tweet_data"> Our latest theme 'Nano - Simple Magazine WordPress Theme' on <a href="#" target="_blank" rel="nofollow">#EnvatoMarket</a></div> <br/>
-									<div class="clear"></div>
-									<div class="times"> <em> <a href="#" target="_blank" title="Follow cactusthemes on Twitter [Opens new window]"> 5 months ago </a> </em></div>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</li>
-						</ul>
 					</aside>
 				</div>
 			</div>
@@ -69,15 +32,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-sm-6 copyright">
-						<span>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://www.cssmoban.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></span>
+						<span>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://www.13520v.com.com/">www.13520v.com</a></span>
 					</div>
 					<div class="col-md-6 col-sm-6 link">
 						<div class="menu-footer-menu-container">
-							<ul id="menu-footer-menu" class="menu list-inline">
-								<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-								<li><a href="#"><i class="fa fa-comments"></i> Contact</a></li>
-								<li><a href="#"><i class="fa fa-question-circle"></i> FAQ</a></li>
-							</ul>
+
 						</div>
 					</div>
 				</div>
@@ -85,5 +44,61 @@
 		</div> 
 	</footer>
 	<!-- Footer -->
+<?php foreach ($static['script'] as $key => $value) {
+	$jsLink = $static_url.'/static/'.$value.'?version='.$static_version;
+	echo sprintf('<script src="%s" type="text/javascript"></script>',$jsLink);
+} ?>
 
-<?php  echo  $static_url;?>
+  <script>
+    $(document).ready(function() {
+      $("#owl-demo").owlCarousel({
+        autoPlay: 3000,
+        items : 5,
+        itemsDesktop : [1199,4],
+        itemsDesktopSmall : [979,4]
+      });
+    });
+
+
+    function isMobile() {
+        var userAgentInfo = navigator.userAgent;
+        var mobileAgents = [ "Android", "iPhone", "SymbianOS", "Windows Phone", "iPad","iPod"];
+        var mobile_flag = false;
+        //根据userAgent判断是否是手机
+        for (var v = 0; v < mobileAgents.length; v++) {
+            if (userAgentInfo.indexOf(mobileAgents[v]) > 0) {
+                mobile_flag = true;
+                break;
+            }
+        }
+        var screen_width = window.screen.width;
+        var screen_height = window.screen.height;
+        //根据屏幕分辨率判断是否是手机
+        if(screen_width < 500 && screen_height < 800){
+            mobile_flag = true;
+        }
+        return mobile_flag;
+    }
+
+    if(isMobile() == false){
+		var height = document.getElementById('main-content').clientHeight;
+		if (height) {
+			document.getElementById('sidebar').style.height = height + 'px';
+			var wid_tags_height = $('#sidebar .wid-tags').height(),
+				wid_post_height = $('#sidebar .wid-post').height(),
+				wid_news_height = $('#sidebar .wid-news .heading').height();
+			   $('#sidebar .wid-news .content').height(height-wid_tags_height-wid_post_height-wid_news_height-80);
+
+			  var show_number = Math.floor($('#sidebar .wid-news .content').height() / 110);
+		   	 $('#sidebar .wid-news .wrap-vid').each(function(index, ele){
+				if (index >= show_number) {
+					$('#sidebar .wid-news .wrap-vid').eq(index).hide();
+				}
+			 });
+
+
+
+		}
+	}
+console.log("技术交流：strive965432@gmail.com");
+ </script>
