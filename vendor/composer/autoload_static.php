@@ -10,10 +10,12 @@ class ComposerStaticInitf397116eaf97b01ac14612120a5eebc2
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '3a37ebac017bc098e9a86b35401e7a68' => __DIR__ . '/..' . '/mongodb/mongodb/src/functions.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '06dd8487319ccd8403765f5b8c9f2d61' => __DIR__ . '/..' . '/alcaeus/mongo-php-adapter/lib/Mongo/functions.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'ee2eba616b1493b62ef61c9c04a94bc1' => __DIR__ . '/..' . '/overtrue/validation/src/helpers.php',
         'ae7194bca42dba7ee19708e6d06e5787' => __DIR__ . '/..' . '/pinguo/php-msf/src/Helpers/Common.php',
         '33f2045f3e37f79455cc01e72d4b69d0' => __DIR__ . '/..' . '/pinguo/php-msf/src/Macro.php',
+        '841780ea2e1d6545ea3a253239d59c05' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -25,6 +27,10 @@ class ComposerStaticInitf397116eaf97b01ac14612120a5eebc2
         array (
             'Test\\' => 5,
         ),
+        'Q' => 
+        array (
+            'Qiniu\\' => 6,
+        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
@@ -34,6 +40,10 @@ class ComposerStaticInitf397116eaf97b01ac14612120a5eebc2
             'PG\\I18N\\' => 8,
             'PG\\Context\\' => 11,
             'PG\\AOP\\' => 7,
+        ),
+        'O' => 
+        array (
+            'Overtrue\\Validation\\' => 20,
         ),
         'N' => 
         array (
@@ -74,6 +84,10 @@ class ComposerStaticInitf397116eaf97b01ac14612120a5eebc2
         array (
             0 => __DIR__ . '/../..' . '/test',
         ),
+        'Qiniu\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -101,6 +115,10 @@ class ComposerStaticInitf397116eaf97b01ac14612120a5eebc2
         'PG\\AOP\\' => 
         array (
             0 => __DIR__ . '/..' . '/pinguo/php-aop/src',
+        ),
+        'Overtrue\\Validation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/overtrue/validation/src',
         ),
         'Noodlehaus\\' => 
         array (
@@ -145,6 +163,13 @@ class ComposerStaticInitf397116eaf97b01ac14612120a5eebc2
     );
 
     public static $prefixesPsr0 = array (
+        'S' => 
+        array (
+            'Sunra\\PhpSimple\\HtmlDomParser' => 
+            array (
+                0 => __DIR__ . '/..' . '/sunra/php-simple-html-dom-parser/Src',
+            ),
+        ),
         'M' => 
         array (
             'Mongo' => 

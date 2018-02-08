@@ -103,7 +103,7 @@ class Base extends Controller
             $encObj = $this->getObject(UrlEncrypt::class);
             $cid =  $encObj->decrypt_url($currentCol);
             $this->currentColnum = $cid;
-            $this->getContext()->getOutput()->setCookie('cid', $this->currentColnum);
+           // $this->getContext()->getOutput()->setCookie('cid', $this->currentColnum);
         }else{
 //            $cid = $this->getContext()->getInput()->getCookie('cid');
 //            if($cid){

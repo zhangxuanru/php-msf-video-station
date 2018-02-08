@@ -9,8 +9,10 @@ return array(
     'c964ee0ededf28c96ebd9db5099ef910' => $vendorDir . '/guzzlehttp/promises/src/functions_include.php',
     'a0edc8309cc5e1d60e3047b5df6b7052' => $vendorDir . '/guzzlehttp/psr7/src/functions_include.php',
     '3a37ebac017bc098e9a86b35401e7a68' => $vendorDir . '/mongodb/mongodb/src/functions.php',
-    '37a3dc5111fe8f707ab4c132ef1dbc62' => $vendorDir . '/guzzlehttp/guzzle/src/functions_include.php',
     '06dd8487319ccd8403765f5b8c9f2d61' => $vendorDir . '/alcaeus/mongo-php-adapter/lib/Mongo/functions.php',
+    '37a3dc5111fe8f707ab4c132ef1dbc62' => $vendorDir . '/guzzlehttp/guzzle/src/functions_include.php',
+    'ee2eba616b1493b62ef61c9c04a94bc1' => $vendorDir . '/overtrue/validation/src/helpers.php',
     'ae7194bca42dba7ee19708e6d06e5787' => $vendorDir . '/pinguo/php-msf/src/Helpers/Common.php',
     '33f2045f3e37f79455cc01e72d4b69d0' => $vendorDir . '/pinguo/php-msf/src/Macro.php',
+    '841780ea2e1d6545ea3a253239d59c05' => $vendorDir . '/qiniu/php-sdk/src/Qiniu/functions.php',
 );

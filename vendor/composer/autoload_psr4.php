@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'cdcchen\\net\\curl\\' => array($vendorDir . '/cdcchen/curl-client/src'),
     'Test\\' => array($baseDir . '/test'),
+    'Qiniu\\' => array($vendorDir . '/qiniu/php-sdk/src/Qiniu'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'PG\\MSF\\' => array($vendorDir . '/pinguo/php-msf/src'),
@@ -15,6 +16,7 @@ return array(
     'PG\\I18N\\' => array($vendorDir . '/pinguo/php-i18n/src'),
     'PG\\Context\\' => array($vendorDir . '/pinguo/php-context/src'),
     'PG\\AOP\\' => array($vendorDir . '/pinguo/php-aop/src'),
+    'Overtrue\\Validation\\' => array($vendorDir . '/overtrue/validation/src'),
     'Noodlehaus\\' => array($vendorDir . '/hassankhan/config/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'MongoDB\\' => array($vendorDir . '/mongodb/mongodb/src'),
