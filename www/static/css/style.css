@@ -544,3 +544,87 @@ p.moreContent:after {
 
 
 
+html, body {
+    padding: 0px;
+    margin: 0px;
+}
+.ui_wrapper_top {
+    width: 100%;
+    margin: 10px 0px;
+    height: 40px;
+}
+.ui_wrapper_top .wrapper_top_container {
+    min-width: 95%;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+.ui_wrapper_top .wrapper_top_container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.ui_wrapper_top .wrapper_top_container div {
+    display: inline-block;
+    width: 60%;
+    position: relative;
+    line-height: 0px;
+}
+
+.ui_wrapper_top .wrapper_top_container span{
+    display: inline-block;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.ui_wrapper_top .wrapper_top_container input{
+    min-width: 50% !important;
+    width: 50% !important;
+    display: inline-block !important;
+    border: 0px;
+    border: 1px solid;
+    line-height: 38px;
+    padding: 0px;
+    margin: 0px;
+    padding-left: 10px;
+    border-right: 0px;
+}
+.ui_wrapper_top .wrapper_top_container  button{
+    padding: 0px;
+    margin: 0px;
+    height: 40px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid;
+    cursor: pointer;
+    padding: 19.5px 20px 18.5px 20px;
+    font-size: 14px;
+}
+.ui_wrapper_top .wrapper_top_container input:focus,
+.ui_wrapper_top .wrapper_top_container button:focus {
+    outline-offset: 0px;
+    outline:  0px;
+}
+
+p.ui_set_eclipse {
+    position: relative;
+    line-height: 25px;
+    max-height: -webkit-fill-available;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+p.ui_set_eclipse:after {
+    content: "...";
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    padding-left: 40px;
+    background: -webkit-linear-gradient(left, transparent, #fff 55%);
+    background: -o-linear-gradient(right, transparent, #fff 55%);
+    background: -moz-linear-gradient(right, transparent, #fff 55%);
+    background: linear-gradient(to right, transparent, #fff 55%);
+}
+
+
+

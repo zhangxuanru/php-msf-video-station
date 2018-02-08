@@ -44,20 +44,15 @@
     }
 </style>
 <!--Top-->
-	<nav id="top">
-		<div class="container">
-			<div class="row col-sm-12 col-md-12 col-lg-12 ui-row">
-				<div class="row-wrapper">
-					<span>Welcome to 13520v!</span>
-					<div class="row-search">
-						<input type="text" placeholder="请输入搜索内容">
-						<input type="button" value="搜索">
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</nav>
+<!--Top-->
+<div class="ui_wrapper_top">
+    <div class="wrapper_top_container">
+        <span>Welcome to 13520v!</span>
+        <div>
+            <input type="text" placeholder="请输入搜索内容"><button>搜索</button>
+        </div>
+    </div>
+</div>
 	
 	<!--Navigation-->
     <nav id="menu" class="navbar">

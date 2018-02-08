@@ -37,7 +37,7 @@ $this->insert('Public/Header',$staticOption,$metaData); ?>
 					<span><i class="fa fa-calendar"></i><?php echo date('d/m/Y',$data['published_at']); ?></span>
 					<span><i class="fa fa-heart"></i><?php echo $data['like_number']; ?></span>
 				</div>
-				<p style="margin-top: 10px;"> <?php echo $data['description']; ?> <br/> all rights reserved:<?php echo $data['type'] == '1'  ? 'https://www.youtube.com' : 'https://www.bilibili.com';?> </p>
+				<p class="ui_set_eclipse" style="margin-top: 10px;"> <?php echo $data['description']; ?> <br/> all rights reserved:<?php echo $data['type'] == '1'  ? 'https://www.youtube.com' : 'https://www.bilibili.com';?> </p>
 				<div class="line"></div>
 				<div class="comment">
 					<h3>Comment</h3>
