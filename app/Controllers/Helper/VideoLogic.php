@@ -258,7 +258,8 @@ class VideoLogic extends BaseLogic
             $videoData['videoplayType'] = 'hls';
         }else{
             $pathInfo = pathinfo($videoData['filename']);
-            $videoData['videoUrl'] = $this->getComm()->generateVideoLinks($pathInfo['filename']);
+            $filename = $pathInfo['filename'].".mp4";
+            $videoData['videoUrl'] = $this->getComm()->generateVideoLinks($filename);
             $videoData['videoplayType'] = 'mp4';
         }
         if($this->openCache){
