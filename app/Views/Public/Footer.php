@@ -94,7 +94,7 @@
 						wid_post_height = $('#sidebar .wid-post').height(),
 						wid_news_height = $('#sidebar .wid-news .heading').height();
 					$('#sidebar .wid-news .content').height(height-wid_tags_height-wid_post_height-wid_news_height-80);
-					var show_number = Math.floor($('#sidebar .wid-news .content').height() / 110);
+					var show_number = Math.floor(($('#sidebar .wid-news .content').height()-40) / 95);
 					$('#sidebar .wid-news .wrap-vid').each(function(index, ele){
 						if (index >= show_number) {
 							$('#sidebar .wid-news .wrap-vid').eq(index).hide();
