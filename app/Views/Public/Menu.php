@@ -47,7 +47,6 @@
 <!--Top-->
 <div class="ui_wrapper_top">
     <div class="wrapper_top_container">
-        <span>Welcome to 13520v!</span>
         <div>
             <input type="text" placeholder="请输入搜索内容"><button>搜索</button>
         </div>

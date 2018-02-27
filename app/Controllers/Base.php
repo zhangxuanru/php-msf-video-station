@@ -103,7 +103,6 @@ class Base extends Controller
             $encObj = $this->getObject(UrlEncrypt::class);
             $cid =  $encObj->decrypt_url($currentCol);
             $this->currentColnum = $cid;
-           // $this->getContext()->getOutput()->setCookie('cid', $this->currentColnum);
         }else{
 //            $cid = $this->getContext()->getInput()->getCookie('cid');
 //            if($cid){
@@ -149,6 +148,7 @@ class Base extends Controller
        $defaultData['videoList'] = yield $this->Logic->getVideoLogic()->getTopVideoData(10);
        //右侧标签
        $defaultData['getTagsRanking'] = yield $this->Logic->getTagsLogic()->getTagsRanking();
+
        //右侧栏目
        $sidebarData = yield $this->Logic->getVideoLogic()->sidebarData($this->currentColnum);
        if(empty($sidebarData) && $this->currentColnum != '1'){
