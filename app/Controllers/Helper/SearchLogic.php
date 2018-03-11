@@ -59,7 +59,10 @@ class SearchLogic extends BaseLogic
            }
            $keyList = array_keys($countArr,$value);
            if($keyList){
-               $terms[] = implode('',$keyList);
+               $t = implode('',$keyList);
+               if($t  != $keywords){
+                  $terms[] = implode('',$keyList);
+               }
                foreach($keyList as $index){
                    unset($countArr[$index]);
                }
