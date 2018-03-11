@@ -37,6 +37,12 @@ class Logic extends Core
         return $this->getObject(CommentLogic::class);
     }
 
+    public function getSearchLogic()
+    {
+        return $this->getObject(SearchLogic::class);
+    }
+
+
 }
 
 

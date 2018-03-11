@@ -23,9 +23,6 @@ class BaseLogic extends Core
 
     public function __construct()
     {
-        //$funObj = $this->getObject(FuncS::class);
-       // $header = $this->getContext()->getInput()->getAllHeader();
-     //   $this->isMobile = $funObj->isMobileRequest($header);
         $this->service  = $this->getObject(Services::class);
     }
 

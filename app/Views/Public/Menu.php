@@ -46,11 +46,14 @@
 <!--Top-->
 <!--Top-->
 <div class="ui_wrapper_top">
+    <form method="get" action="/search/">
     <div class="wrapper_top_container">
         <div>
-            <input type="text" placeholder="请输入搜索内容"><button>搜索</button>
+            <input id="serarchKeywords"  name="keywords" value="<?php echo isset($title) ? $title : ''; ?>" type="text" placeholder="Please enter the search content" style="border-right:1px solid">
+            <button type="submit" value="search" onclick="return checkKeyword()">search</button>
         </div>
     </div>
+    </form>
 </div>
 	
 	<!--Navigation-->

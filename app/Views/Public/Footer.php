@@ -106,5 +106,18 @@
 			setMobileStyle();
 		}
 	});
+
+
+	function checkKeyword()
+	{
+      var keyWord = $("#serarchKeywords").val();
+          keyWord = $.trim(keyWord);
+      if(keyWord.length == 0){
+          window.location.href="/recommend";
+          return false;
+      }
+		return true;
+	}
+
 console.log("技术交流：mailbox:strive965432@gmail.com, github:https://github.com/zhangxuanru");
  </script>

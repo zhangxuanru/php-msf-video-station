@@ -8,12 +8,14 @@
 
 namespace App\Lib\Service; 
 
+
 use PG\MSF\Base\Core;
 use App\Services\NavService;
 use App\Services\VideoService;
 use App\Services\BaseService;
 use App\Services\TagsService;
 use App\Services\CommentService;
+use App\Services\SearchService;
  
 class Services extends Core
 {
@@ -41,6 +43,13 @@ class Services extends Core
   {
      return $this->getObject(BaseService::class);
   }
+
+    public function getSearchService()
+    {
+        return $this->getObject(SearchService::class);
+    }
+
+
 
 
 
