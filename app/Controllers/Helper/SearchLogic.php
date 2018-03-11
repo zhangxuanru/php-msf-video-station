@@ -46,7 +46,7 @@ class SearchLogic extends BaseLogic
 
     /**
      * 手动拆词 拆成单个的小词
-     * @param $keywords
+     * @param $keywords      
      */
    public function getProcessKeyWordsSearch($keywords)
    {
@@ -56,10 +56,13 @@ class SearchLogic extends BaseLogic
        foreach($countArr as $key => $value){
            if(!isset($countArr[$key])){
                 continue;
-           }
+           }   
            $keyList = array_keys($countArr,$value);
            if($keyList){
-               $terms[] = implode('',$keyList);
+               $t = implode('',$keyList);
+               if($t  != $keywords){
+                  $terms[] = implode('',$keyList);
+               }
                foreach($keyList as $index){
                    unset($countArr[$index]);
                }
