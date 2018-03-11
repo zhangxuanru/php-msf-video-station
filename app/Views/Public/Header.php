@@ -7,10 +7,10 @@
    <!--
     <meta http-equiv="Content-Security-Policy" content="script-src www.13520v.com test.13520v.com; style-src www.13520v.com test.13520v.com player.qiniucc.com;">
    -->
-    <meta name="description" content="<?php echo isset($description) ? $description : '我的抓取站,抓取youtube上的天文,科学,电子产品,计算机等频道的视频。还有更多youtube精彩视频等你来看哟!!!抓取,youtube,bilibili,php,python, Science, Electronic, Computer, Astronomical, NASA, MinuteEarth, UFO, Scientific American Space Lab,apple,review,tech,unboxing,education,learn,Samsung, Tom Scott, SciShow, Linus Tech Tips, ColdFusion, Unbox Therapy, Austin Evans, AsapSCIENCE, TechnoBuffalo, CrashCourse, The 8-Bit Guy, Computerphile, Tampatec'; ?>">
+    <meta name="description" content="<?php echo isset($description) ? $description : '黑狗视频 我的抓取站,抓取youtube上的天文,科学,电子产品,计算机等频道的视频。还有更多youtube精彩视频等你来看哟!!!抓取,youtube,bilibili,php,python, Science, Electronic, Computer, Astronomical, NASA, MinuteEarth, UFO, Scientific American Space Lab,apple,review,tech,unboxing,education,learn,Samsung, Tom Scott, SciShow, Linus Tech Tips, ColdFusion, Unbox Therapy, Austin Evans, AsapSCIENCE, TechnoBuffalo, CrashCourse, The 8-Bit Guy, Computerphile, Tampatec'; ?>">
     <meta name="author" content="zxr">
-    <meta name="keywords" content="<?php echo isset($keywords) ? $keywords : '抓取,youtube,bilibili,php,python, Science, Electronic, Computer, Astronomical, NASA, MinuteEarth, UFO, Scientific American Space Lab,apple,review,tech,unboxing,education,learn,Samsung, Tom Scott, SciShow, Linus Tech Tips, ColdFusion, Unbox Therapy, Austin Evans, AsapSCIENCE, TechnoBuffalo, CrashCourse, The 8-Bit Guy, Computerphile, Tampatec'; ?>">
-    <title><?php echo isset($title) ? $title : '我的抓取站,抓取youtube上的天文,科学,电子产品,计算机等频道的视频,还有更多youtube精彩视频等你来看。'; ?></title>
+    <meta name="keywords" content="<?php echo isset($keywords) ? $keywords : '黑狗视频 抓取,youtube,bilibili,php,python, Science, Electronic, Computer, Astronomical, NASA, MinuteEarth, UFO, Scientific American Space Lab,apple,review,tech,unboxing,education,learn,Samsung, Tom Scott, SciShow, Linus Tech Tips, ColdFusion, Unbox Therapy, Austin Evans, AsapSCIENCE, TechnoBuffalo, CrashCourse, The 8-Bit Guy, Computerphile, Tampatec'; ?>">
+    <title><?php echo isset($title) ? $title : '黑狗视频 我的抓取站,抓取youtube上的天文,科学,电子产品,计算机等频道的视频,还有更多youtube精彩视频等你来看。'; ?></title>
     <?php foreach ($static['style'] as $key => $value) {
       $cssLink = $static_url.'/static/'.$value.'?version='.$static_version;
       echo sprintf('<link rel="stylesheet" href="%s"  type="text/css">',$cssLink);
