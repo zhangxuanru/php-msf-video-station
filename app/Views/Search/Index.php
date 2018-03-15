@@ -80,7 +80,7 @@ $this->insert('Public/Header',$staticOption,$metaData); ?>
                  <ul class="pagination">
                      <?php if ($pageNumber >=4){ ?>
 						<li>
-							<a href="/tag/?tag=<?php echo $tag; ?>&page=<?php echo ($page-1 >=1) ? $page-1 : '1'; ?>" aria-label="Previous">
+							<a href="/search/?keyword=<?php echo $keywords; ?>&page=<?php echo ($page-1 >=1) ? $page-1 : '1'; ?>" aria-label="Previous">
 								<span aria-hidden="true">&laquo;</span>
 							</a>
 						</li>
@@ -88,11 +88,11 @@ $this->insert('Public/Header',$staticOption,$metaData); ?>
                      <?php for($i=1;$i<=$pageNumber;$i++){
                              if($i == 4){
                                  $nextPage = ($page+1 > $pageNumber) ? $pageNumber : $page+1;
-                                 $html = sprintf("<li><a href='%s' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>",'/tag/?tag='.$tag.'&page='.$nextPage);
+                                 $html = sprintf("<li><a href='%s' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>",'/search/?keyword='.$keywords.'&page='.$nextPage);
                                  echo $html;
                                  break;
                              }
-                         $html = sprintf("<li><a href='%s'>%d</a></li>",'/tag/?tag='.$tag.'&page='.$i,$i);
+                         $html = sprintf("<li><a href='%s'>%d</a></li>",'/search/?keyword='.$keywords.'&page='.$i,$i);
                          echo $html;
                      } ?>
 					</ul>

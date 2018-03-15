@@ -48,76 +48,34 @@
 	$jsLink = $static_url.'/static/'.$value.'?version='.$static_version;
 	echo sprintf('<script src="%s" type="text/javascript"></script>',$jsLink);
 } ?>
-
   <script>
     $(document).ready(function() {
-      $("#owl-demo").owlCarousel({
-        autoPlay: 3000,
-        items : 5,
-        itemsDesktop : [1199,4],
-        itemsDesktopSmall : [979,4]
-      });
-
-		function isMobile() {
-			var userAgentInfo = navigator.userAgent;
-			var mobileAgents = [ "Android", "iPhone", "SymbianOS", "Windows Phone", "iPad","iPod"];
-			var mobile_flag = false;
-			//根据userAgent判断是否是手机
-			for (var v = 0; v < mobileAgents.length; v++) {
-				if (userAgentInfo.indexOf(mobileAgents[v]) > 0) {
-					mobile_flag = true;
-					break;
-				}
-			}
-			var screen_width = window.screen.width;
-			var screen_height = window.screen.height;
-			//根据屏幕分辨率判断是否是手机
-			if(screen_width < 500 && screen_height < 800){
-				mobile_flag = true;
-			}
-			return mobile_flag;
-		}
-
-		// 如果是手机端，单独设置样式
-		function  setMobileStyle() {
-			$('.ui_wrapper_top .wrapper_top_container span').hide();
-			$('.ui_wrapper_top .wrapper_top_container div').css({'width': '100%'});
-			$('.ui_wrapper_top .wrapper_top_container input').css({'width': '75% !important', 'min-width': '75% !important'});
-		}
-		if(isMobile() == false){
-			// var height = document.getElementById('main-content').clientHeight;
-			setTimeout(function() {
-				var height = $('#main-content').height();
-				if (height) {
-					document.getElementById('sidebar').style.height = height + 'px';
-					var wid_tags_height = $('#sidebar .wid-tags').height(),
-						wid_post_height = $('#sidebar .wid-post').height(),
-						wid_news_height = $('#sidebar .wid-news .heading').height();
-					$('#sidebar .wid-news .content').height(height-wid_tags_height-wid_post_height-wid_news_height-80);
-					var show_number = Math.floor(($('#sidebar .wid-news .content').height()-40) / 95);
-					$('#sidebar .wid-news .wrap-vid').each(function(index, ele){
-						if (index >= show_number) {
-							$('#sidebar .wid-news .wrap-vid').eq(index).hide();
-						}
-					});
-				}
-			}, 100);
-		}else{
-			setMobileStyle();
-		}
-	});
-
-
-	function checkKeyword()
-	{
-      var keyWord = $("#serarchKeywords").val();
-          keyWord = $.trim(keyWord);
-      if(keyWord.length == 0){
-          window.location.href="/recommend";
-          return false;
-      }
-		return true;
-	}
-
+        $("#owl-demo").owlCarousel({
+            autoPlay: 3000,
+            items: 5,
+            itemsDesktop: [1199, 4],
+            itemsDesktopSmall: [979, 4]
+        });
+        if(isMobile() == false){
+            setTimeout(function() {
+                var height = $('#main-content').height();
+                if (height) {
+                    document.getElementById('sidebar').style.height = height + 'px';
+                    var wid_tags_height = $('#sidebar .wid-tags').height(),
+                        wid_post_height = $('#sidebar .wid-post').height(),
+                        wid_news_height = $('#sidebar .wid-news .heading').height();
+                    $('#sidebar .wid-news .content').height(height-wid_tags_height-wid_post_height-wid_news_height-80);
+                    var show_number = Math.floor(($('#sidebar .wid-news .content').height()-40) / 95);
+                    $('#sidebar .wid-news .wrap-vid').each(function(index, ele){
+                        if (index >= show_number) {
+                            $('#sidebar .wid-news .wrap-vid').eq(index).hide();
+                        }
+                    });
+                }
+            }, 100);
+        }else{
+            setMobileStyle();
+        }
+    });
 console.log("技术交流：mailbox:strive965432@gmail.com, github:https://github.com/zhangxuanru");
  </script>

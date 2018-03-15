@@ -22,6 +22,7 @@ class Search extends Base
     public function actionIndex()
     {
         $keywords = $this->getContext()->getInput()->get('keywords');
+        $type     = $this->getContext()->getInput()->get('type');
         if(strlen($keywords) > 100 ){
             $keywords = substr($keywords,0,100);
         }
@@ -37,15 +38,12 @@ class Search extends Base
         $terms = [];
         if(empty($data)){
             $terms =  $this->Logic->getSearchLogic()->getProcessKeyWordsSearch($keywords);
-//            $keywords = implode(" ",$terms);
-//            $data = yield $this->Logic->getSearchLogic()->getSearchByKeyWords($keywords);
-        }
-        if(!empty($data)){
+        }else{
             $data = yield $this->Logic->getSearchLogic()->getVideoDataBySearchData($data);
         }
         $metaData = array(
             'title' => $keywords
-        );       
+        );
         //总数
         $total = isset($data['total']) ? $data['total'] : 0 ;
         //总共页数
@@ -56,9 +54,26 @@ class Search extends Base
         $this->assign('count',$total);
         $this->assign('page',$page);
         $this->assign('pageNumber',$pageNumber);
+        $this->assign('keywords',$keywords);
+        $this->assign('type',$type);
         $this->assign('videoData',$data);
         $this->assign('metaData',$metaData);
         $this->display();
+    }
+
+    /**
+     * 自动匹配接口
+     */
+    public function actionQuery()
+    {
+        $keyword = $this->getContext()->getInput()->get('keyword');
+        $keyword = trim($keyword);
+        if(empty($keyword) ){
+             $this->outputJson([]);
+             return;
+        }
+        $data = yield $this->Logic->getSearchLogic()->getSuggestSearchByKeyWords($keyword,0,10);
+        $this->outputJson($data); 
     }
 
 

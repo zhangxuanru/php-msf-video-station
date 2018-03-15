@@ -6,7 +6,7 @@
  * @copyright Chengdu pinguo Technology Co.,Ltd.
  */
 
-namespace App\Lib\Options;
+namespace App\Lib\atatics;
  
 /**
  * Class Child
@@ -28,7 +28,8 @@ class StaticOption
           'script' => [
                        'js/jquery-2.1.1.js',
                        'js/bootstrap.min.js',
-                       'js/owl.carousel.js'
+                       'js/owl.carousel.js',
+                       'js/search.js'
                       ]          
        ];
        

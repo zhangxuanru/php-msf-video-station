@@ -27,7 +27,8 @@ class StaticOption
           'script' => [
                        'js/jquery-2.1.1.js',
                        'js/bootstrap.min.js', 
-                       'owl-carousel/owl.carousel.js'
+                       'owl-carousel/owl.carousel.js',
+                       'js/search.js'
                       ]          
        ];
         $options = [

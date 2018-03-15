@@ -42,6 +42,41 @@
         line-height: 40px;
         padding: 0px 10px;
     }
+    /**/
+    .ui_wrapper_top .wrapper_top_container div.ui-model {
+        position: relative;
+    }
+    .ui_wrapper_top .wrapper_top_container div.ui-model div.model-wrapper {
+        display: none;
+        position: absolute;
+        top: 42px;
+        left: 0px; 
+        z-index: 100;
+        width: 100%;
+    }
+    .ui_wrapper_top .wrapper_top_container div.ui-model div.model-wrapper ul  {
+        border-left: 1px solid #CCC;
+        border-right: 1px solid #CCC;
+        background-color: #ffffff;
+        padding: 0px;
+        margin: 0px;
+    }
+     .ui_wrapper_top .wrapper_top_container div.ui-model div.model-wrapper ul li {
+        display: block;
+        padding: 0px;
+        margin: 0px;
+        line-height: normal;
+        color: #000;
+        text-align: left;
+     }
+    .ui_wrapper_top .wrapper_top_container div.ui-model div.model-wrapper ul li:hover {
+        background-color: #CCC;
+        cursor:default;
+    }
+
+    .ui_wrapper_top .wrapper_top_container div.ui-model input {
+        width: 100% !important;
+    }
 </style>
 <!--Top-->
 <!--Top-->
@@ -49,8 +84,15 @@
     <form method="get" action="/search/">
     <div class="wrapper_top_container">
         <div>
-            <input id="serarchKeywords"  name="keywords" value="<?php echo isset($title) ? $title : ''; ?>" type="text" placeholder="Please enter the search content" style="border-right:1px solid">
-            <button type="submit" value="search" onclick="return checkKeyword()">search</button>
+            <div class="ui-model">
+                <input id="serarchKeywords"  autocomplete="off" name="keywords" value="<?php echo isset($title) ? $title : ''; ?>" type="text" placeholder="Please enter the search content" style="border-right:1px solid" onkeydown=''>
+                <input type="hidden" name="type" value="0" id="searchType">
+                <div class="model-wrapper">
+                    <ul class="wrapper-list">
+                    </ul>
+                </div>
+            </div>
+            <button type="submit" id="vsearch" value="search" onclick="return checkKeyword()">search</button>
         </div>
     </div>
     </form>
@@ -84,4 +126,7 @@
 			</div>
 		</div>
 	</nav>
- 
+
+<script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer>
+    
+</script> 

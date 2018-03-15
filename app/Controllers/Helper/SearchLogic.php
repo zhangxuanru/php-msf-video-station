@@ -12,19 +12,61 @@ use App\Lib\Tool\UrlEncrypt;
 
 class SearchLogic extends BaseLogic
 {
+    private  $cacheTime = 600;
+
     /**
      * 根据title与 keywords查询关键字
      * @param $keywords
+     * @param $start
+     * @param $limit
      * @return mixed
      */
     public function getSearchByKeyWords($keywords,$start=0,$limit=10)
     {
-       $keywords = trim($keywords);       
+        $keywords = trim($keywords);
+        $cacheKey = 'mult_catch_'.crc32($keywords).'_'.$start.'_'.$limit;
+        if($this->openCache){
+            $data = yield $this->getComm()->getRedis()->get($cacheKey);
+            if(!empty($data)){
+                return json_decode($data,true);
+            }
+        }
        $result =  yield $this->service->getSearchService()->searchMultiMatchByKeyWords($keywords,$start,$limit);        
         if(empty($result) || !is_array($result) || empty($result['hits']['total']) ){
             return [];
         }
         $data =  $this->processSearchData($result);
+        if($this->openCache){
+            yield  $this->getComm()->getRedis()->set($cacheKey, json_encode($data), $this->cacheTime);
+        }
+        return $data;
+    }
+
+
+    /**
+     * 根据关键字查询 符合自动补全的结果
+     * @param $keywords
+     * @param int $start
+     * @param int $limit
+     */
+    public function getSuggestSearchByKeyWords($keywords,$start=0,$limit=10)
+    {
+        $keywords = trim($keywords);
+        $cacheKey = crc32($keywords).'_'.$start.'_'.$limit;
+        if($this->openCache){
+            $data = yield $this->getComm()->getRedis()->get($cacheKey);
+            if(!empty($data)){
+                 return json_decode($data,true);
+            }
+        }
+        $result =  yield $this->service->getSearchService()->getSuggestSearchByKeyWords($keywords,$start,$limit);
+        if(empty($result) || !is_array($result) || !isset($result['suggest']) || empty($result['suggest'])){
+              return [];
+        }
+        $data = $this->processSuggestSearchData($result);
+        if($this->openCache){
+            yield  $this->getComm()->getRedis()->set($cacheKey, json_encode($data), $this->cacheTime);
+        }
         return $data;
     }
 
@@ -89,6 +131,33 @@ class SearchLogic extends BaseLogic
         return $data;
     }
 
+
+    /**
+     * 处理搜索自动补全结果集
+     * @param $result
+     */
+    public function processSuggestSearchData($result)
+    {
+        $searchKeySuggest = isset($result['suggest']['search-key-suggest']) ? $result['suggest']['search-key-suggest'] : [];
+        $searchTitSuggest = isset($result['suggest']['search-tit-suggest']) ? $result['suggest']['search-tit-suggest'] : [];
+        $data = [];
+        if(!empty($searchKeySuggest) && !empty($searchKeySuggest[0]['options'])){
+            $options =  $searchKeySuggest[0]['options'];
+            $data    =  array_column($options,'text');
+        }
+        if(!empty($searchTitSuggest) && !empty($searchTitSuggest[0]['options'])){
+            $options =  $searchTitSuggest[0]['options'];
+            $option  =  array_column($options,'text');
+            $data    =  array_merge($data,$option);
+        }
+        array_walk($data,function(&$value,$key){
+            $list = explode(",",$value);
+            $row  = array_chunk($list,4);
+            $value = implode(' ',array_shift($row));
+        });
+        return $data;
+    }
+
     /**
      * 根据搜索数据获取视频信息
      * @param array $data
@@ -104,6 +173,24 @@ class SearchLogic extends BaseLogic
             $list[] = yield $videoLogic->getVideoDataById($val['id']);
         }
         return $list;
+    }
+
+    /**
+     * 检查搜索次数，一分钟只能搜10次
+     */
+    public function trySearchNumber()
+    {
+        $uuId = $this->getContext()->getInput()->getCookie('uuId');
+        if(empty($uuId)){
+            $uuId = uniqid();
+            $this->getContext()->getOutput()->setCookie('uuId',$uuId,3600);
+        }
+        $cacheKey = $uuId;
+        $data = yield $this->getComm()->getRedis()->get($cacheKey);
+        if(!empty($data) && $data>=10){
+             return false;
+        }
+        return true;
     }
 
 }
