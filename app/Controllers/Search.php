@@ -72,7 +72,7 @@ class Search extends Base
              $this->outputJson([]);
              return;
         }
-        $data = yield $this->Logic->getSearchLogic()->getSuggestSearchByKeyWords($keyword,0,10);
+        $data = yield $this->Logic->getSearchLogic()->getSuggestSearchByKeyWords($keyword,0,20);
         $this->outputJson($data); 
     }
 
