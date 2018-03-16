@@ -150,13 +150,13 @@ class SearchLogic extends BaseLogic
             $option  =  array_column($options,'text');
             $data    =  array_merge($data,$option);
         }
-        $data = array_unique($data);
-        $data = array_values($data);
         array_walk($data,function(&$value,$key){
             $list = explode(",",$value);
             $row  = array_chunk($list,4);
             $value = implode(' ',array_shift($row));
         });
+        $data = array_unique($data);
+        $data = array_values($data);
         $data = array_slice($data,0,10);
         return $data;
     }
